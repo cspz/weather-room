@@ -33,7 +33,7 @@ const char* INFLUX_ORG    = "weatherroom";
 const char* INFLUX_BUCKET = "sensors";
 
 // Read interval in milliseconds
-const int READ_INTERVAL_MS = 500;
+const int READ_INTERVAL_MS = 5000;
 
 // =============================================================
 // HARDWARE

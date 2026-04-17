@@ -130,7 +130,7 @@ Uses the following libraries — install all via Arduino IDE Library Manager:
 
 - Initializes both I2C buses and UART on boot
 - Runs a 15 second ENS160 warmup before starting the main loop
-- Reads all sensors every 2 seconds
+- Reads all sensors every 5 seconds
 - Prints everything to Serial at 115200 baud in a structured format
 - Performs a sanity check on temperature readings (skips the cycle if AHT values are out of range, which can happen briefly on boot)
 - Does not store, average, or modify any sensor values
@@ -147,7 +147,7 @@ Quick start:
 cp arduino/weather_room_wifi_template.ino arduino/weather_room_wifi.ino
 ```
 
-The WiFi sketch does everything the serial version does — same sensors, same 2-second loop, same raw-data-only philosophy — and additionally connects to WiFi on boot and POSTs sensor readings to InfluxDB every 2 seconds using HTTP and InfluxDB Line Protocol.
+The WiFi sketch does everything the serial version does — same sensors, same 5-second loop, same raw-data-only philosophy — and additionally connects to WiFi on boot and POSTs sensor readings to InfluxDB every 5 seconds using HTTP and InfluxDB Line Protocol.
 
 ### WiFi and InfluxDB configuration
 
