@@ -218,7 +218,7 @@ Find the port in Arduino IDE under Tools → Port.
 - Pressure — BMP280
 - CO2, TVOC, AQI — ENS160
 - Particulates — PM1.0, PM2.5, PM10 overlaid
-- Latest values bar at the bottom with live readouts for all 13 metrics
+- Latest values bar at the bottom with live readouts for all the metrics
 
 ### Dashboard screenshot
 
