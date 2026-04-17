@@ -42,7 +42,7 @@ BAUD_RATE   = 115200
 MAX_POINTS  = 120
 UPDATE_MS   = 505
 
-# Use the system local timezone automatically (no hardcoded city/region).
+# Use the system local timezone automatically 
 LOCAL_TZ = datetime.now().astimezone().tzinfo
 
 # =============================================================

@@ -130,7 +130,7 @@ Uses the following libraries — install all via Arduino IDE Library Manager:
 
 - Initializes both I2C buses and UART on boot
 - Runs a 15 second ENS160 warmup before starting the main loop
-- Reads all sensors every 5 seconds
+- Reads all sensors every 5 seconds (interval can be changed in the arduino wifi sketch via READ_INTERVAL_MS, or via the last delay() in the other sketch)
 - Prints everything to Serial at 115200 baud in a structured format
 - Performs a sanity check on temperature readings (skips the cycle if AHT values are out of range, which can happen briefly on boot)
 - Does not store, average, or modify any sensor values
