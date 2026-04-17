@@ -78,7 +78,7 @@ Purple board (BMP280 + AHT20). Pin labels as printed on the board:
 | PIN5 (TX) | GPIO25 | ESP32 RX |
 | All others | — | Leave unconnected |
 
-### I2C addresses (confirmed by scanner)
+### I2C addresses 
 
 | Address | Sensor | Bus |
 |---|---|---|
@@ -123,7 +123,7 @@ Uses the following libraries — install all via Arduino IDE Library Manager:
 3. Install the four libraries above via Library Manager
 4. Open `arduino/weather_room.ino`
 5. Select board: `ESP32 Dev Module`
-6. Set upload speed to `115200` if you have issues uploading
+6. Set upload speed to `115200` if upload issues occur
 7. Upload
 
 ### What the firmware does
@@ -139,7 +139,7 @@ Uses the following libraries — install all via Arduino IDE Library Manager:
 
 ## Firmware — WiFi version
 
-Use `arduino/weather_room_wifi_template.ino` as the public template, then create your local `arduino/weather_room_wifi.ino` with your own credentials.
+Use `arduino/weather_room_wifi_template.ino` as the public template, then create a local `arduino/weather_room_wifi.ino` with local credentials.
 
 Quick start:
 
@@ -154,21 +154,21 @@ The WiFi sketch does everything the serial version does — same sensors, same 2
 At the top of the sketch there is a configuration block. Fill these in before uploading:
 
 ```cpp
-#define WIFI_SSID    "your_network"
-#define WIFI_PASS    "your_password"
-#define INFLUX_URL   "http://YOUR_MAC_IP:8086"  // e.g. http://192.168.1.42:8086
-#define INFLUX_TOKEN "your_influxdb_token"
+#define WIFI_SSID    "WIFI_NETWORK_NAME"
+#define WIFI_PASS    "WIFI_PASSWORD"
+#define INFLUX_URL   "http://LOCAL_MAC_IP:8086"  // e.g. http://192.168.1.42:8086
+#define INFLUX_TOKEN "INFLUXDB_API_TOKEN"
 #define INFLUX_ORG   "weatherroom"
 #define INFLUX_BUCKET "sensors"
 ```
 
-Find your Mac's current IP with:
+Find the Mac's current IP with:
 
 ```bash
 ipconfig getifaddr en0
 ```
 
-Note that the Mac IP can change between reboots. To avoid reflashing, assign a static local IP to your Mac in your router's DHCP settings.
+Note that the Mac IP can change between reboots. To avoid reflashing, assign a static local IP in the router's DHCP settings.
 
 ### Offline behavior
 
@@ -203,13 +203,13 @@ Make sure Arduino IDE Serial Monitor is closed before running — the port can o
 At the top of `dashboard.py`:
 
 ```python
-SERIAL_PORT = "/dev/cu.usbserial-1430"  # change to your port
+SERIAL_PORT = "/dev/cu.usbserial-1430"  # change to the desired port
 BAUD_RATE   = 115200
 MAX_POINTS  = 120                        # number of points shown (4 min at 2s interval)
 UPDATE_MS   = 505                        # dashboard refresh rate (ms)
 ```
 
-Find your port in Arduino IDE under Tools → Port.
+Find the port in Arduino IDE under Tools → Port.
 
 ### What it shows
 
@@ -252,14 +252,14 @@ weather-room/
 
 ## InfluxDB + Grafana
 
-Persistent time-series storage and historical dashboards running locally in Docker. Requires Docker Desktop to be running on your Mac.
+Persistent time-series storage and historical dashboards running locally in Docker. Requires Docker Desktop to be running.
 
 ### Start the stack
 
 First-time setup:
 
 1. Copy the template to a local env file.
-2. Put your chosen InfluxDB password in the local file.
+2. Put the chosen InfluxDB password in the local file.
 3. Start Docker from the `docker` folder.
 
 ```bash
@@ -268,12 +268,12 @@ cp .env.template .env
 docker compose up -d
 ```
 
-- InfluxDB: [http://localhost:8086](http://localhost:8086) — username `admin`, password from your local `docker/.env`
+- InfluxDB: [http://localhost:8086](http://localhost:8086) — username `admin`, password from the local `docker/.env`
 - Grafana: [http://localhost:3000](http://localhost:3000) — first login is `admin` / `admin`, then change it after sign-in
 
 On the first InfluxDB startup, Docker reads the password from `docker/.env` and uses it to initialize the database.
 
-Both containers are configured with `restart: unless-stopped`, so they come back up automatically when your Mac restarts.
+Both containers are configured with `restart: unless-stopped`, so they come back up automatically when the Mac restarts.
 
 ### Data storage
 
