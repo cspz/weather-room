@@ -312,6 +312,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "temp_aht21" or r._field == "temp_aht20" or r._field == "temp_bmp280")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### Humidity (AHT21 and AHT20 overlaid)
@@ -321,6 +322,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "humidity_aht21" or r._field == "humidity_aht20")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### Pressure
@@ -330,6 +332,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "pressure")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### Altitude
@@ -339,6 +342,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "altitude")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### CO2
@@ -348,6 +352,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "co2")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### TVOC
@@ -357,6 +362,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "tvoc")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### AQI (range 1–5)
@@ -366,6 +372,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "aqi")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 #### Particulates (PM1.0, PM2.5, PM10 overlaid)
@@ -375,6 +382,7 @@ from(bucket: "sensors")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "air_quality")
   |> filter(fn: (r) => r._field == "pm1" or r._field == "pm25" or r._field == "pm10")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
 ```
 
 ---
