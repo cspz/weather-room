@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local secret/env files
+.env
+docker/.env
+
+# WiFi sketch with real credentials 
+arduino/weather_room_wifi.ino
