@@ -234,13 +234,16 @@ Find your port in Arduino IDE under Tools → Port.
 weather-room/
 ├── arduino/
 │   ├── weather_room.ino                # ESP32 firmware (serial version)
-│   ├── weather_room_wifi_template.ino  # WiFi template (safe to commit)
-│   └── weather_room_wifi.ino           # local WiFi file with real creds (gitignored)
+│   ├── weather_room_wifi_template.ino   # WiFi template 
+│   └── weather_room_wifi.ino            # local WiFi file with real creds (gitignored)
+├── docs/
+│   └── assets/                         # screenshots and hardware photos
 ├── docker/
 │   ├── docker-compose.yml              # starts InfluxDB and Grafana
-│   └── .env.template                  # local env template (safe to commit)
+│   └── .env.template                   # local env template 
 ├── dashboard.py               # live Python dashboard
 ├── requirements.txt           # Python dependencies
+├── LICENSE
 ├── .gitignore
 └── README.md
 ```
