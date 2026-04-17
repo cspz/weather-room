@@ -36,8 +36,8 @@ The AHT21 and AHT20 both measure temperature and humidity independently. The BMP
 
 | | |
 |---|---|
-| <img src="docs/assets/hardware/esp32_dev_board.jpg" alt="ESP32 dev board" width="240"> <br> ESP32 dev board | <img src="docs/assets/hardware/sensor_boards.jpg" alt="Sensor boards" width="240"> <br> ENS160 + AHT21 and BMP280 + AHT20 boards |
-| <img src="docs/assets/hardware/pms5003.jpg" alt="PMS5003 sensor" width="240"> <br> PMS5003 sensor | <img src="docs/assets/hardware/quick_setup.jpg" alt="Quick setup" width="240"> <br> Quick setup |
+| <img src="docs/assets/hardware/esp32_dev_board.jpg" alt="ESP32 dev board" width="200"> <br> ESP32 dev board | <img src="docs/assets/hardware/sensor_boards.jpg" alt="Sensor boards" width="200"> <br> ENS160 + AHT21 and BMP280 + AHT20 boards |
+| <img src="docs/assets/hardware/pms5003.jpg" alt="PMS5003 sensor" width="200"> <br> PMS5003 sensor | <img src="docs/assets/hardware/quick_setup.jpg" alt="Quick setup" width="200"> <br> Quick setup |
 
 ---
 
