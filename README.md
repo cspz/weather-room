@@ -94,12 +94,11 @@ AHT21 and AHT20 both default to address 0x38 and have no way to change it. Putti
 ---
 
 ## Thermal note
+The AHT21 is physically located on the same PCB as the ENS160. The ENS160 is a known heat source during normal operation. Its datasheet acknowledges self-heating as an expected side effect of the metal oxide sensing element. This raises the local board temperature and introduces a systematic positive bias in the AHT21 temperature readings of approximately 2–3°C relative to the AHT20 and BMP280.
 
-The AHT21 is physically located on the same PCB as the ENS160. The ENS160 generates heat during normal operation which raises the local board temperature and causes the AHT21 to read approximately 2-3°C higher than actual room temperature. This is a placement issue, not a sensor defect — the AHT21 is intrinsically the more accurate sensor per spec (newer revision than AHT20), but its readings are thermally biased.
+The AHT20 and BMP280 are on a separate board. Both are low-power sensors with negligible self-heating, and no on-board heat source has been identified that would systematically bias their readings. They are therefore used as the less-biased temperature reference available.
 
-In practice, AHT20 and BMP280 agree within 0.5°C and are more representative of actual room temperature.
-
-For ENS160 compensation (which requires live temperature and humidity as input per the datasheet), AHT20 values are used since they are thermally unbiased.
+AHT20 values are used as the temperature and humidity input for ENS160 compensation as required by the datasheet. AHT21 readings are logged but not used for compensation.
 
 All values from all sensors are logged raw with no correction applied. Any calibration offsets should be applied at the analysis layer.
 
