@@ -6,7 +6,7 @@
 <img src="docs/assets/screenshort_dashboard_matplotlib.png" alt="weather-room live dashboard" width="100%">
 </td>
 <td align="center" width="50%">
-<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" style="width: 90%; position: relative; top: 4px;">
+<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" style="width: 90%; position: relative; top: 6px;">
 </td>
 </tr>
 <tr>
