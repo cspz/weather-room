@@ -9,3 +9,5 @@ docker/.env
 
 # WiFi sketch with real credentials 
 arduino/weather_room_wifi.ino
+
+CLAUDE.md
