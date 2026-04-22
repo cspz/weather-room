@@ -4,12 +4,14 @@
 <tr>
 <td align="center" width="50%">
 <img src="docs/assets/screenshort_dashboard_matplotlib.png" alt="weather-room live dashboard" width="100%">
-<br><sub>Python dashboard</sub>
 </td>
 <td align="center" width="50%">
-<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" style="width: 88%; position: relative; top: 4px;">
-<br><sub style="position: relative; top: -11px;">Grafana dashboard</sub>
+<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" style="width: 90%; position: relative; top: 4px;">
 </td>
+</tr>
+<tr>
+<td align="center"><sub>Python dashboard</sub></td>
+<td align="center"><sub>Grafana dashboard</sub></td>
 </tr>
 </table>
 
