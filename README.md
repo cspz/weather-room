@@ -7,8 +7,8 @@
 <br><sub>Python dashboard</sub>
 </td>
 <td align="center" width="50%">
-<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" width="98%" style="position: relative; top: 4px;">
-<br><sub>Grafana dashboard</sub>
+<img src="docs/assets/screenshot_grafana.png" alt="weather-room Grafana dashboard" style="width: 88%; position: relative; top: 4px;">
+<br><sub style="position: relative; top: -11px;">Grafana dashboard</sub>
 </td>
 </tr>
 </table>
