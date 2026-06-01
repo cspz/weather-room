@@ -15,7 +15,7 @@
 </tr>
 </table>
 
-*Live Python dashboard reading from the ESP32 in real time.*
+
 
 A DIY indoor air quality monitor built on an ESP32. It reads temperature, humidity, pressure, CO2, TVOC, AQI, and particulate matter (PM1.0, PM2.5, PM10) from a set of sensors wired to a breadboard, streams all data over Serial, and visualizes everything in a live Python dashboard.
 
